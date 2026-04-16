@@ -1,7 +1,50 @@
 
 import { Link } from 'react-router-dom'
+import {  LuLayoutGrid, LuLayers, LuAppWindow, LuSettings, LuCopy, LuRefreshCw } from "react-icons/lu";
+import { useRef, useState } from "react";
+import { FaCheck } from "react-icons/fa";
 
 function Header() {
+
+const features = [
+  {
+    title: "Crafted for Startups",
+    desc: "Tuae nam ex similique incidunt expedita exerci  tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    icon: <LuLayoutGrid />,
+  },
+  {
+    title: "High-quality Design",
+    desc: "Tuae nam ex similique incidunt expedita exerci  tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    icon: <LuLayers />,
+  },
+  {
+    title: "Next.js 16 (Latest)",
+    desc: "Tuae nam ex similique incidunt expedita exerci  tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    icon: <LuAppWindow />,
+  },
+  {
+    title: "Tailwind CSS",
+    desc: "Tuae nam ex similique incidunt expedita exerci  tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    icon: <LuSettings />,
+  },
+  {
+    title: "Fully Customizable",
+    desc: "Tuae nam ex similique incidunt expedita exerci  tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    icon: <LuCopy />,
+  },
+  {
+    title: "Free and Open-Source",
+    desc: "Tuae nam ex similique incidunt expedita exerci  tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    icon: <LuRefreshCw />,
+  },
+];
+
+  
+  const handleClick = () => {
+    alert("Image clicked!");
+  };
+
+
   return (
     <div>
       <header className="p-4 dark:bg-gray-800 dark:text-gray-800">
@@ -43,16 +86,245 @@ function Header() {
 
 <section className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
-		<h1 className="text-4xl font-bold leading-none sm:text-5xl">Quisquam necessita vel
-			<span className="dark:text-violet-600">laborum doloribus</span>delectus
+		<h1 className="text-4xl font-bold leading-none sm:text-5xl">Free and Open-Source Next.js Template for Startup & SaaS
+			<span className="dark:text-violet-600"></span>
 		</h1>
-		<p className="px-8 mt-8 mb-12 text-lg">Cupiditate minima voluptate temporibus quia? Architecto beatae esse ab amet vero eaque explicabo!</p>
+		<p className="px-8 mt-8 mb-12 text-lg">Startup is free Next.js template for startups and SaaS business websites comes with all the essential pages, components, and sections you need to launch a complete business website, built-with Next 16.x and Tailwind CSS.</p>
 		<div className="flex flex-wrap justify-center">
-			<button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Get started</button>
-			<button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300">Learn more</button>
+			<button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50 dark:border-gray-300">Get Pro</button>
+			<button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300">Star on GitHub</button>
 		</div>
 	</div>
 </section>
+
+<section className="bg-[#0b1120] text-white py-20 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+
+        <h2 className="text-5xl font-bold mb-6 mt-6">Main Features</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-30 text-xl">
+          There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.
+        </p>
+
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-12 gap-x-40">
+          {features.map((item, index ) => (
+            <div key={index} className="text-left h-70 w-99 ">
+              
+              {/* Icon */}
+              <div className="w-22 h-22 flex items-center justify-center rounded-xl bg-blue-600/20 mb-6">
+                 {item.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-2xl font-semibold mb-3">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-400 text-l leading-relaxed">
+                {item.desc}
+              </p>
+
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+	
+<section className="bg-[#0b1120] text-white py-20 px-6">
+	<div className="max-w-6xl mx-auto text-center">
+	<h2 className="text-5xl font-bold mb-6 mt-6">We are ready to help</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-30 text-xl">
+         There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
+        </p>
+
+	<div className="flex justify-center mt-10">
+
+      <img
+        src="https://www.unir.net/wp-content/uploads/2014/10/grado-derecho-online.jpeg"
+        alt="clickable"
+        onClick={handleClick}
+        className="w-[700px] rounded-xl cursor-pointer hover:scale-105 transition"
+      />
+
+    </div>
+
+</div>
+</section>
+
+
+
+<section className="bg-[#0b1120] py-10">
+	<div className="container p-6      max-w-8xl mx-auto px-6">
+		
+		<div className="bg-[#1e293b]  px-8 py-6 flex flex-wrap items-center justify-center gap-10 shadow-lg h-50">
+		<div className='flex items-center gap-2 opacity-50'>	<img src='https://startup.demo.nextjstemplates.com/images/brands/uideck-light.svg' className='h-8 w-auto opacity-70 hover:opacity-100 transition duration-300'></img>  </div>
+		<div className='flex items-center gap-2 opacity-50'>	<img src='https://startup.demo.nextjstemplates.com/images/brands/formbold-light.svg' className='h-8 w-auto opacity-70 hover:opacity-100 transition duration-300' ></img> </div>
+		<div className='flex items-center gap-2 opacity-50'>	<img src='https://startup.demo.nextjstemplates.com/images/brands/tailgrids-light.svg' className='h-8 w-auto opacity-70 hover:opacity-100 transition duration-300'></img> </div>
+		<div className='flex items-center gap-2 opacity-50'>	<img src='https://startup.demo.nextjstemplates.com/images/brands/lineicons-light.svg' className='h-8 w-auto opacity-70 hover:opacity-100 transition duration-300'></img> </div>
+		<div className='flex items-center gap-2 opacity-50'>	<img src='https://startup.demo.nextjstemplates.com/images/brands/tailadmin-light.svg' className='h-8 w-auto opacity-70 hover:opacity-100 transition duration-300'></img> </div>
+		<div className='flex items-center gap-2 opacity-50'>	<img src='https://startup.demo.nextjstemplates.com/images/brands/plainadmin-light.svg' className='h-8 w-auto opacity-70 hover:opacity-100 transition duration-300'></img> </div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section className="bg-[#0b1120] text-white">
+	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+		<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+			<div className='flex gap-20'>
+<div>			
+				<h3 className="text-5xl font-bold tracking-tight w-150 dark:text-gray-900">Crafted for Startup, SaaS and Business Sites.</h3>
+				<p className="mt-3 text-lg text-gray-500 w-130">The main ‘thrust’ is to focus on
+					 educating attendees on how to best protect highly vulnerable business applications
+					  with interactive panel discussions and roundtables.</p>
+				<div className="mt-20 space-y-12 flex gap-20">
+					
+<div>					
+		            <div className="flex items-center">
+							<div className="flex items-center justify-center w-8 h-8 bg-[#1e293b] p-2 rounded-lg  m-4">
+								<FaCheck  className=''/>
+							</div>
+						
+						<div className="ml-4">
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Premium quality</h4>	
+						</div>
+					</div>
+					<div className="flex items-center">
+						
+							<div className="flex items-center justify-center w-8 h-8 bg-[#1e293b] p-2 rounded-lg m-4">
+								<FaCheck />
+							</div>
+						
+						<div className="ml-4">
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Tailwind CSS</h4>
+						</div>
+					</div>
+					<div className="flex items-center">
+						
+							<div className="flex items-center justify-center w-8 h-8 bg-[#1e293b] p-2 rounded-lg m-4">
+								<FaCheck />
+							</div>
+						
+						<div className="ml-4">
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Use for lifetime</h4>
+						</div>
+					</div>
+</div>					
+<div>
+
+					<div className="flex items-center">
+						
+							<div className="flex items-center justify-center w-8 h-8 bg-[#1e293b] p-2 rounded-lg  m-4">
+								<FaCheck />
+							</div>
+						
+						<div className="ml-4">
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Next.js</h4>
+						</div>
+					</div>
+
+					<div className="flex items-center">
+						
+							<div className="flex items-center justify-center w-8 h-8 bg-[#1e293b] p-2 rounded-lg m-4">
+								<FaCheck />
+							</div>
+						
+						<div className="ml-4">
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Rich documentation</h4>
+						</div>
+					</div>
+
+					<div className="flex items-center">
+						
+							<div className="flex items-center justify-center w-8 h-8 bg-[#1e293b] p-2 rounded-lg m-4">
+								<FaCheck />
+							</div>
+						
+						<div className="ml-4">
+							<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Developer friendly</h4>
+						</div>
+					</div>
+</div>
+
+
+
+				</div>
+	</div>	
+<img src='https://startup.demo.nextjstemplates.com/images/about/about-image-dark.svg'></img>
+			</div>
+			<div aria-hidden="true" className="mt-10 lg:mt-0">
+				<img src="https://source.unsplash.com/random/360x480" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+			</div>
+		</div>
+		<div>
+			<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+				<div className="lg:col-start-2">
+					<h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-900">Eam nibh gloriatur ex</h3>
+					<p className="mt-3 text-lg dark:text-gray-600">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
+					<div className="mt-12 space-y-12">
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+								</div>
+							</div>
+							<div className="ml-4">
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Cibo augue offendit has ad</h4>
+								<p className="mt-2 dark:text-gray-600">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+							</div>
+						</div>
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+								</div>
+							</div>
+							<div className="ml-4">
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">At eum ferri luptatum lobortis</h4>
+								<p className="mt-2 dark:text-gray-600">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+							</div>
+						</div>
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-600 dark:text-gray-50">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+									</svg>
+								</div>
+							</div>
+							<div className="ml-4">
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-900">Dicunt verterem evertitur eu sea</h4>
+								<p className="mt-2 dark:text-gray-600">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+					<img src="https://source.unsplash.com/random/361x481" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
   )
